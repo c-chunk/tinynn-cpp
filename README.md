@@ -1,134 +1,176 @@
 # tinynn-cpp
 
-A tiny neural network framework written in **C++20**\
-for learning, experimentation, and understanding how deep learning
-libraries work.
+A tiny neural network framework in C++20.
 
-tinynn provides a compact implementation of tensors, layers, optimizers,
-and a training loop, with a focus on **clarity and educational value**
-rather than production performance.
+tinynn-cpp is a lightweight, header-oriented deep learning framework designed for learning, experimentation, and small-scale projects.
+It provides a clean and minimal API while supporting modern neural network components such as CNN layers, optimizers, and training utilities.
 
-------------------------------------------------------------------------
+---
 
 ## ✨ Features
 
--   Header-only design (no build step required for the core)
--   Contiguous Tensor implementation (row-major, NCHW for CNN)
--   Simple Sequential model API
--   Core layers (Affine, ReLU, Sigmoid)
--   CNN layers (Conv2d, MaxPool2d, GlobalAveragePool2d, etc.)
--   Batch normalization and dropout (including Dropout2d)
--   Optimizers (SGD, Momentum, Adam, AdamW, RMSProp)
--   Trainer with callback system
--   Checkpoint save/load (full state roundtrip)
--   QMNIST dataset support
+* **C++20-based design**
+* **Header-oriented architecture** (minimal build friction)
+* **Contiguous Tensor (row-major, NCHW for CNN)**
+* **Sequential API**
+* **Core Layers**
 
-------------------------------------------------------------------------
+  * Affine (Fully Connected)
+  * ReLU / Sigmoid
+  * Conv2d / MaxPool2d
+  * BatchNorm1d / BatchNorm2d
+  * Dropout / Dropout2d
+  * Flatten / GlobalAveragePool2d / AdaptiveAvgPool2d
+* **Loss**
 
-## 🎯 Why tinynn?
+  * SoftmaxWithLoss (numerically stable)
+* **Optimizers**
 
-Modern frameworks like **PyTorch** or **TensorFlow** are powerful but
-internally complex.
+  * SGD / Momentum / RMSProp / Adam / AdamW
+* **Trainer**
 
-tinynn is designed as a **small, readable C++ framework** that allows
-you to:
+  * Training / Evaluation loop
+  * Callback system
+* **Checkpoint**
 
--   understand how neural networks are implemented
--   study training pipelines and backpropagation
--   experiment with architectures and optimizers
--   build your own ML components from scratch
+  * Model / Optimizer / Training state save & load
+* **Dataset Support**
 
-------------------------------------------------------------------------
+  * QMNIST example included
 
-## 🧠 Design Goals
+---
 
-tinynn follows a few simple principles:
+## 🚀 Quick Start
 
--   **Small and readable codebase**
--   **Header-only architecture**
--   **Minimal external dependencies**
--   **Modern C++ (C++20)**
--   **Clarity over performance**
+### 1. Clone
 
-------------------------------------------------------------------------
-
-## 🚧 Project Status
-
-tinynn is currently an **experimental project**.
-
-------------------------------------------------------------------------
-
-## 📁 Directory Structure
-
-    include/tinynn   core library (header-only)
-    examples         example programs
-    tests            unit and smoke tests
-    data/qmnist      dataset location (not included)
-
-------------------------------------------------------------------------
-
-## 🔧 Requirements
-
--   C++20 compatible compiler
--   CMake 3.16+
-
-------------------------------------------------------------------------
-
-## 🛠️ Build
-
-``` bash
-git clone https://github.com/c-chunk/tinynn-cpp
+```bash
+git clone https://github.com/c-chunk/tinynn-cpp.git
 cd tinynn-cpp
-
-mkdir build
-cd build
-cmake ..
-cmake --build .
 ```
 
-------------------------------------------------------------------------
+### 2. Build (CMake)
 
-## ▶️ Run Examples
-
-``` bash
-./example_minimal
-./example_qmnist_cnn
+```bash
+cmake -B build
+cmake --build build
 ```
 
-------------------------------------------------------------------------
+### 3. Run Example
 
-## 📦 Dataset (QMNIST)
+```bash
+./build/examples/qmnist_cnn
+```
 
-QMNIST data is **not included** in the repository.
+---
 
-Place files under:
+## 🧠 Example (MLP)
 
-    data/qmnist/
-
-------------------------------------------------------------------------
-
-## 🧪 Example
-
-``` cpp
-#include <tinynn/tinynn.h>
+```cpp
+#include <tinynn/nn/sequential.h>
+#include <tinynn/nn/layers/affine.h>
+#include <tinynn/nn/layers/relu.h>
 
 using namespace tinynn;
 
-int main()
-{
-  Sequential<float> model;
-
-  model.add(Affine<float>(784, 128));
-  model.add(ReLU<float>());
-  model.add(Affine<float>(128, 10));
-
-  return 0;
-}
+Sequential<float> model;
+model.add<Affine<float>>(784, 128);
+model.add<ReLU<float>>();
+model.add<Affine<float>>(128, 10);
 ```
 
-------------------------------------------------------------------------
+---
+
+## 🧠 Example (CNN)
+
+```cpp
+Sequential<float> model;
+
+model.add<Conv2d<float>>(1, 32, 3, 3);
+model.add<BatchNorm2d<float>>(32);
+model.add<ReLU<float>>();
+model.add<MaxPool2d<float>>(2, 2);
+
+model.add<Flatten<float>>();
+model.add<Affine<float>>(32 * 13 * 13, 10);
+```
+
+---
+
+## 📊 Training Example
+
+```cpp
+Trainer<float> trainer(model, optimizer, loss);
+
+trainer.fit(train_loader, test_loader, {
+  .epochs = 5
+});
+```
+
+---
+
+## 📈 Sample Result
+
+QMNIST CNN example:
+
+* Accuracy: ~98% (after a few epochs)
+
+---
+
+## 📁 Project Structure
+
+```
+tinynn-cpp/
+├── include/tinynn/        # Core library (header-oriented)
+├── examples/              # Example programs (MLP / CNN)
+├── tests/                 # Unit / integration tests
+├── data/qmnist/           # Dataset (not included in repo)
+├── CMakeLists.txt
+```
+
+---
+
+## 🧩 Design Philosophy
+
+tinynn-cpp aims to be:
+
+* **Minimal but practical**
+* **Readable and educational**
+* **Easy to extend**
+* **Close to the metal (no heavy abstraction)**
+
+It is especially suitable for:
+
+* Learning deep learning internals
+* Experimenting with architectures
+* Understanding training pipelines in C++
+
+---
+
+## ⚠️ Notes
+
+* Tensors are **contiguous (row-major)**
+* CNN uses **NCHW layout**
+* TensorView supports **reshape-only view**
+* No GPU support (CPU only)
+
+---
+
+## 🛠 Requirements
+
+* C++20 compatible compiler (e.g. MSVC / Clang / GCC)
+* CMake 3.16+
+
+---
 
 ## 📄 License
 
-MIT License\
-Copyright (c) 2026 c-chunk
+MIT License
+
+Copyright (c) c-chunk
+
+---
+
+## 🙌 Acknowledgements
+
+This project is inspired by minimalist deep learning frameworks and aims to provide a clean C++ learning experience.
