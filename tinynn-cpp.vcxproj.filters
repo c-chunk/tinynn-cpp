@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{e3cca2af-7149-4536-adcf-e8976adb72af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{b6bf2048-e8fd-4332-8659-efec883e13d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples">
+      <UniqueIdentifier>{0bc3894d-e51a-43a6-8556-77795721f70f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\tinynn">
+      <UniqueIdentifier>{c65bcfc4-8fc1-4adc-8307-c66e70adc01d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\tinynn\data">
+      <UniqueIdentifier>{4e39b669-4718-48a7-b74b-3c1ba5ccd808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\tinynn\datasets">
+      <UniqueIdentifier>{b8844169-daac-4339-83e7-d35506de6a35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\tinynn\nn">
+      <UniqueIdentifier>{094f8967-aafc-4be2-8118-2e8e54d3f6db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\tinynn\optim">
+      <UniqueIdentifier>{bbffe37d-0cd0-40af-9e48-d9c63b15c3dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\tinynn\tensor">
+      <UniqueIdentifier>{8fad0d4c-767c-422e-9540-b7610d15ab9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\tinynn\training">
+      <UniqueIdentifier>{07b42ce6-0538-44a3-afd6-70657739b6af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\tinynn\nn\layers">
+      <UniqueIdentifier>{8d509df7-c108-4407-9d64-4a467244d40d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\tinynn\nn\losses">
+      <UniqueIdentifier>{096e2bbb-cf00-45c3-a428-9a525fe480c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\tinynn\training\callbacks">
+      <UniqueIdentifier>{f307a4d1-84f6-4735-b240-95d13b80a7c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\minimal">
+      <UniqueIdentifier>{d05b06fc-93ce-407a-b1e0-2ba685c1b719}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\qmnist">
+      <UniqueIdentifier>{30ccd68e-8477-4de5-a14f-4e5f9b425886}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\data">
+      <UniqueIdentifier>{739d85dd-8e75-4c9d-b0f4-0d16f859471f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\integration">
+      <UniqueIdentifier>{75948f89-7ad6-4380-90db-fa0a6331ace3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\nn">
+      <UniqueIdentifier>{db1b3789-07a1-4813-b03e-fd5c9188aae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\optim">
+      <UniqueIdentifier>{9de9f010-d1f6-43cf-9622-8af6f9bd5c6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\training">
+      <UniqueIdentifier>{99c3b43e-7c9b-44b6-89b9-fdf269f2c354}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{ab192d2f-0d45-4e92-a7fe-89619516aa75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\qmnist">
+      <UniqueIdentifier>{37aa3ba3-872f-4b46-86ee-75afcd56c477}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\qmnist\qmnist-test-images-idx3-ubyte">
+      <Filter>data\qmnist</Filter>
+    </None>
+    <None Include="data\qmnist\qmnist-test-labels-idx2-int">
+      <Filter>data\qmnist</Filter>
+    </None>
+    <None Include="data\qmnist\qmnist-train-images-idx3-ubyte">
+      <Filter>data\qmnist</Filter>
+    </None>
+    <None Include="data\qmnist\qmnist-train-labels-idx2-int">
+      <Filter>data\qmnist</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\tinynn\tinynn.h">
+      <Filter>include\tinynn</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\data\batch.h">
+      <Filter>include\tinynn\data</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\data\data_loader.h">
+      <Filter>include\tinynn\data</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\data\dummy_dataset.h">
+      <Filter>include\tinynn\data</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\data\idx.h">
+      <Filter>include\tinynn\data</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\datasets\qmnist_dataset.h">
+      <Filter>include\tinynn\datasets</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callback.h">
+      <Filter>include\tinynn\training</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\trainer.h">
+      <Filter>include\tinynn\training</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\trainer_types.h">
+      <Filter>include\tinynn\training</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callbacks\checkpoint.h">
+      <Filter>include\tinynn\training\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callbacks\checkpoint_io.h">
+      <Filter>include\tinynn\training\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callbacks\checkpoint_io_utils.h">
+      <Filter>include\tinynn\training\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callbacks\checkpoint_state_io.h">
+      <Filter>include\tinynn\training\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callbacks\checkpoint_stream.h">
+      <Filter>include\tinynn\training\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callbacks\csv_logger.h">
+      <Filter>include\tinynn\training\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callbacks\early_stopping.h">
+      <Filter>include\tinynn\training\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callbacks\epoch_summary.h">
+      <Filter>include\tinynn\training\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callbacks\nan_guard.h">
+      <Filter>include\tinynn\training\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callbacks\print_every.h">
+      <Filter>include\tinynn\training\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callbacks\reduce_lr_on_plateau.h">
+      <Filter>include\tinynn\training\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\training\callbacks\step_lr.h">
+      <Filter>include\tinynn\training\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\tensor\shape.h">
+      <Filter>include\tinynn\tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\tensor\tensor.h">
+      <Filter>include\tinynn\tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\tensor\tensor_view.h">
+      <Filter>include\tinynn\tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\optim\adam.h">
+      <Filter>include\tinynn\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\optim\adamw.h">
+      <Filter>include\tinynn\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\optim\momentum.h">
+      <Filter>include\tinynn\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\optim\optimizer.h">
+      <Filter>include\tinynn\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\optim\rmsprop.h">
+      <Filter>include\tinynn\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\optim\sgd.h">
+      <Filter>include\tinynn\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\optim\weight_decay_filter.h">
+      <Filter>include\tinynn\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\buffer_view.h">
+      <Filter>include\tinynn\nn</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\init_policy.h">
+      <Filter>include\tinynn\nn</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layer.h">
+      <Filter>include\tinynn\nn</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\parameter_view.h">
+      <Filter>include\tinynn\nn</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\predict.h">
+      <Filter>include\tinynn\nn</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\sequential.h">
+      <Filter>include\tinynn\nn</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layers\adaptive_avg_pool2d.h">
+      <Filter>include\tinynn\nn\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layers\affine.h">
+      <Filter>include\tinynn\nn\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layers\batch_norm1d.h">
+      <Filter>include\tinynn\nn\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layers\batch_norm2d.h">
+      <Filter>include\tinynn\nn\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layers\conv2d.h">
+      <Filter>include\tinynn\nn\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layers\dropout.h">
+      <Filter>include\tinynn\nn\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layers\dropout2d.h">
+      <Filter>include\tinynn\nn\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layers\flatten.h">
+      <Filter>include\tinynn\nn\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layers\global_average_pool2d.h">
+      <Filter>include\tinynn\nn\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layers\maxpool2d.h">
+      <Filter>include\tinynn\nn\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layers\relu.h">
+      <Filter>include\tinynn\nn\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\layers\sigmoid.h">
+      <Filter>include\tinynn\nn\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\nn\losses\softmax_with_loss.h">
+      <Filter>include\tinynn\nn\losses</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tinynn\datasets\qmnist_image_dataset.h">
+      <Filter>include\tinynn\datasets</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="examples\minimal\main.cc">
+      <Filter>examples\minimal</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\qmnist\fit_mlp.cc">
+      <Filter>examples\qmnist</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\qmnist\trainer_mlp.cc">
+      <Filter>examples\qmnist</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\qmnist\qmnist_cnn.cc">
+      <Filter>examples\qmnist</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\data\dummy_dataloader_smoke.cc">
+      <Filter>tests\data</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\integration\mlp_smoke.cc">
+      <Filter>tests\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\integration\qmnist_2layers_cnn_batch2d_dropout2d_smoke_test.cc">
+      <Filter>tests\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\integration\qmnist_2layers_cnn_batch2d_smoke_test.cc">
+      <Filter>tests\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\integration\qmnist_2layers_cnn_smoke_test.cc">
+      <Filter>tests\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\integration\qmnist_3layers_cnn_globalaveragepool2d_smoke_test.cc">
+      <Filter>tests\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\integration\qmnist_cnn_smoke.cc">
+      <Filter>tests\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\integration\qmnist_smoke.cc">
+      <Filter>tests\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\integration\sgd_smoke.cc">
+      <Filter>tests\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\nn\adaptive_avg_pool2d_test.cc">
+      <Filter>tests\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\nn\batch_norm1d_b1_isfinite_test.cc">
+      <Filter>tests\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\nn\batch_norm1d_eval_numeric_grad_test.cc">
+      <Filter>tests\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\nn\batch_norm1d_numeric_grad_test.cc">
+      <Filter>tests\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\nn\batch_norm1d_running_stats_test.cc">
+      <Filter>tests\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\nn\init_policy_smoke_test.cc">
+      <Filter>tests\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\nn\sequential_bn_integration_test.cc">
+      <Filter>tests\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\optim\optimizer_checkpoint_roundtrip_test.cc">
+      <Filter>tests\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\optim\optimizer_weight_decay_filter_test.cc">
+      <Filter>tests\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\training\full_checkpoint_roundtrip_batch1_test.cc">
+      <Filter>tests\training</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\training\full_checkpoint_roundtrip_batch2_test.cc">
+      <Filter>tests\training</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\training\full_checkpoint_roundtrip_test.cc">
+      <Filter>tests\training</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
